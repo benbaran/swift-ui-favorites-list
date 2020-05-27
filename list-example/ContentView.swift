@@ -19,18 +19,20 @@ struct ContentView: View {
                 Section(header: Text("Favorites")) {
                     
                     ForEach(state.favorites, id: \.self) { favorite in
-                        
+
                         HStack{
                             
                             Button(
-                                action: {},
+                                action: {
+                                    self.state.others.append(favorite)
+                                    
+                                    self.state.favorites = self.state.favorites.filter {$0 != favorite}
+                                    
+                                    self.sortItems()
+                            },
                                 label: {Image(systemName: "heart.fill").foregroundColor(.red)}
-                            ).onTapGesture {
-                                
-                                self.state.others.append(favorite)
-                                
-                                self.state.favorites = self.state.favorites.filter {$0 != favorite}
-                            }
+                            )
+                                .id(favorite.id)
                             
                             Text(favorite.name)
                             
@@ -45,14 +47,17 @@ struct ContentView: View {
                         HStack{
                             
                             Button(
-                                action: {},
+                                action: {
+                                    self.state.favorites.append(other)
+                                    
+                                    self.state.others = self.state.others.filter {$0 != other}
+                                    
+                                    self.sortItems()
+                            },
                                 label: {Image(systemName: "heart")}
-                            ).onTapGesture {
-                                
-                                self.state.favorites.append(other)
-                                
-                                self.state.others = self.state.others.filter {$0 != other}
-                            }
+                            )
+                                .id(other.id)
+                            
                             
                             Text(other.name)
                             
@@ -63,6 +68,17 @@ struct ContentView: View {
         }.onAppear(){
             
             self.populateState()
+        }
+    }
+    
+    func sortItems(){
+
+        self.state.favorites.sort {
+            $0.name < $1.name
+        }
+
+        self.state.others.sort {
+            $0.name < $1.name
         }
     }
     
