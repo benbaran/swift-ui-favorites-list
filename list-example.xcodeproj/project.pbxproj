@@ -13,6 +13,7 @@
 		B33E03BA247EE3A50049E708 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B33E03B9247EE3A50049E708 /* Assets.xcassets */; };
 		B33E03BD247EE3A50049E708 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B33E03BC247EE3A50049E708 /* Preview Assets.xcassets */; };
 		B33E03C0247EE3A50049E708 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B33E03BE247EE3A50049E708 /* LaunchScreen.storyboard */; };
+		B33E03C8247EE3C50049E708 /* ApplicationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33E03C7247EE3C50049E708 /* ApplicationState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		B33E03BC247EE3A50049E708 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B33E03BF247EE3A50049E708 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B33E03C1247EE3A50049E708 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B33E03C7247EE3C50049E708 /* ApplicationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		B33E03B2247EE39D0049E708 /* list-example */ = {
 			isa = PBXGroup;
 			children = (
+				B33E03C7247EE3C50049E708 /* ApplicationState.swift */,
 				B33E03B3247EE39D0049E708 /* AppDelegate.swift */,
 				B33E03B5247EE39D0049E708 /* SceneDelegate.swift */,
 				B33E03B7247EE39D0049E708 /* ContentView.swift */,
@@ -146,6 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B33E03C8247EE3C50049E708 /* ApplicationState.swift in Sources */,
 				B33E03B4247EE39D0049E708 /* AppDelegate.swift in Sources */,
 				B33E03B6247EE39D0049E708 /* SceneDelegate.swift in Sources */,
 				B33E03B8247EE39D0049E708 /* ContentView.swift in Sources */,
